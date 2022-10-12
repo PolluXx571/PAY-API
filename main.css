@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/dm-serif-display-v10-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/dm-serif-display-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* public-sans-regular - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/public-sans-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/public-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* public-sans-700 - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/public-sans-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/public-sans-v14-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: "Public Sans", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  flex-grow: 1;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding-left: 0px;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+/*header start*/
+
+.site-header {
+  padding: 40px 0px 156px 0px;
+  background-image: url("./imgs/headerbg.svg");
+  animation-name: slideDown;
+  animation-duration: 1s;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.header-box__btn {
+  position: relative;
+  z-index: 5;
+  width: 28px;
+  height: 17px;
+  border: none;
+  background-image: url("./imgs/hamburg-menu.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.header-box__nav-box {
+  position: relative;
+  top: -82px;
+  display: none;
+  width: 300px;
+  padding: 95px 25px 312px 25px;
+  background-color: #1b262f;
+  animation-name: slideDown;
+  animation-duration: 1s;
+}
+
+.site-header__active .header-box__nav-box {
+  display: block;
+}
+
+.site-header__active .header-box__btn {
+  width: 21px;
+  height: 21px;
+  margin-right: 4px;
+  background-image: url("./imgs/hambur-close.svg");
+}
+
+.header-nav {
+  padding-top: 43px;
+  border-top: 1px solid rgb(251, 252, 254, 0.15);
+}
+
+.header-nav__list {
+}
+
+.header-nav__item {
+  margin-bottom: 32px;
+}
+
+.header-nav__link {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #fbfcfe;
+  opacity: 0.7;
+}
+
+.mail-box {
+  display: block;
+  width: 252px;
+  margin: 0 auto;
+  padding: 16px 36px 14px 38px;
+  background-color: #ba4270;
+  box-shadow: 10px 10px 25px -10px #36536b40;
+  border-radius: 24px;
+}
+
+.mail-box__link {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.115385px;
+  font-weight: 700;
+  color: #fbfcfe;
+}
+
+
+
+
+.telephone-img{
+  margin: 32px 0 0 80px;
+  padding: 0;
+  width: 128px;
+  height: 240px;
+
+}
+
+/*header end*/
+
+
+/*keyframes start */
+/*background image header  start animatcia */
+@keyframes slideDown {
+  from{
+    transform: translateY(-200px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+
+}
+
+/*background image header  end animatcia */
+
+
+/*keyframes end */
